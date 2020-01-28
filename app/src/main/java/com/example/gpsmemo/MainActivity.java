@@ -26,6 +26,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.wearable.Wearable;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * NB: this sample application was widely inspired by :
@@ -150,7 +151,7 @@ public class MainActivity extends WearableActivity implements
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        Log.d(LOG_TAG, "onRequestPermissionsResult(): " + permissions);
+        Log.d(LOG_TAG, "onRequestPermissionsResult(): " + Arrays.toString(permissions));
 
         if (requestCode == REQUEST_GPS_PERMISSION_RESULT_CODE) {
             Log.i(LOG_TAG, "Received response for GPS permission request");
